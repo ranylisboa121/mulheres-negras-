@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça mulheres negras que transformaram a história do Brasil com suas ideias, arte, educação e resistência.">
+  <title>Mulheres Negras que Marcaram a História</title>
+  <style>
+    :root {
+      --bg: #17110f;
+      --panel: #241916;
+      --panel2: #30211b;
+      --gold: #f2b544;
+      --orange: #d96c1d;
+      --cream: #fff1d8;
+      --muted: #d7c5ae;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 22px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(217,108,29,.35), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(242,181,68,.22), transparent 30%),
+        linear-gradient(135deg, #160f0d, #382016 58%, #17110f);
+      border-bottom: 5px solid var(--orange);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "✦  ✧  ✦  ✧  ✦";
+      position: absolute;
+      bottom: 18px;
+      left: 0;
+      right: 0;
+      color: rgba(242,181,68,.45);
+      letter-spacing: 18px;
+      font-size: 20px;
+    }
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      font-weight: bold;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 18px auto;
+      font-size: clamp(2.5rem, 7vw, 5.8rem);
+      line-height: .98;
+      text-transform: uppercase;
+      letter-spacing: -.04em;
+    }
+    h1 span { color: var(--gold); }
+    .hero p {
+      max-width: 680px;
+      margin: 22px auto 30px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--gold);
+      color: #21130d;
+      padding: 13px 23px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+    .cta:hover { transform: translateY(-3px); background: #ffd27a; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 25px;
+      padding: 14px;
+      background: rgba(23,17,15,.95);
+      border-bottom: 1px solid rgba(242,181,68,.25);
+      backdrop-filter: blur(8px);
+    }
+    nav a { color: var(--cream); text-decoration: none; font-size: .92rem; }
+    nav a:hover { color: var(--gold); }
+    main { width: min(1100px, 92%); margin: auto; }
+    section { padding: 72px 0; }
+    .section-kicker {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .75rem;
+      font-weight: bold;
+    }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 8px 0 14px; line-height: 1.1; }
+    .intro { max-width: 760px; color: var(--muted); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .card {
+      background: linear-gradient(155deg, var(--panel2), var(--panel));
+      border: 1px solid rgba(242,181,68,.22);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    }
+    .portrait {
+      width: 100%; height: 230px; object-fit: cover;
+      display: block; border-radius: 12px; margin-bottom: 18px;
+      border: 1px solid rgba(242,181,68,.35);
+      background: #160f0d;
+    }
+    .photo-credit { display: block; color: #bda88e; font-size: .72rem; margin-top: 10px; }
+    .photo-credit a { color: var(--gold); }
+    .symbol {
+      width: 58px; height: 58px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: rgba(242,181,68,.13);
+      border: 1px solid rgba(242,181,68,.55);
+      color: var(--gold);
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+    }
+    .card h3 { color: var(--gold); margin: 0 0 5px; font-size: 1.28rem; }
+    .role { color: #e89a52; font-size: .85rem; font-weight: bold; margin: 0 0 13px; }
+    .card p { color: var(--muted); margin: 0; font-size: .96rem; }
+    .quote {
+      margin: 18px 0 0;
+      padding: 30px;
+      border-left: 5px solid var(--gold);
+      background: #211713;
+      border-radius: 0 14px 14px 0;
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
+      font-weight: bold;
+    }
+    .quote small { display: block; color: var(--muted); font-size: .85rem; font-weight: normal; margin-top: 10px; }
+    .why {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .why-box {
+      background: linear-gradient(135deg, #492719, #241713);
+      border-radius: 18px;
+      padding: 28px;
+      border: 1px solid rgba(242,181,68,.25);
+    }
+    .why-box strong { color: var(--gold); }
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: var(--muted);
+      background: #100c0b;
+      border-top: 4px solid var(--orange);
+    }
+    footer strong { color: var(--gold); }
+    @media (max-width: 650px) {
+      .why { grid-template-columns: 1fr; }
+      nav { gap: 8px 15px; }
+      section { padding: 52px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+    <div class="hero">
+      <div class="eyebrow">Projeto Afro-Negrini • Consciência Negra</div>
+      <h1>Mulheres Negras que <span>Marcaram</span> a História</h1>
+      <p>Mulheres que abriram caminhos por meio da literatura, da educação, da arte e da luta por igualdade. Conhecer suas histórias é reconhecer sua importância.</p>
+      <a class="cta" href="#mulheres">Conheça essas mulheres</a>
+    </div>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="#inicio">Início</a>
+    <a href="#mulheres">As mulheres</a>
+    <a href="#importancia">Por que lembrar?</a>
+  </nav>
+
+  <main>
+    <section id="mulheres">
+      <div class="section-kicker">História • Cultura • Representatividade</div>
+      <h2>Mulheres que fizeram a diferença</h2>
+      <p class="intro">Suas trajetórias mostram talento, coragem e contribuição para a sociedade brasileira. Cada uma, em sua área, ajudou a ampliar espaços e a transformar a história.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img class="portrait" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carolina_Maria_de_Jesus,_1960_(cropped).png" alt="Retrato de Carolina Maria de Jesus" loading="lazy">
+          <h3>Carolina Maria de Jesus</h3>
+          <p class="role">Escritora</p>
+          <p>Autora de <em>Quarto de Despejo: Diário de uma Favelada</em>, livro publicado em 1960. Em sua escrita, registrou o cotidiano da favela, a pobreza e as desigualdades sociais a partir de sua própria experiência.</p>
+          <small class="photo-credit">Foto: <a href="https://commons.wikimedia.org/wiki/Category:Carolina_de_Jesus" target="_blank" rel="noopener">Wikimedia Commons</a>.</small>
+        </article>
+
+        <article class="card">
+          <img class="portrait" src="https://commons.wikimedia.org/wiki/Special:FilePath/Antonieta_de_Barros.webp" alt="Retrato de Antonieta de Barros" loading="lazy">
+          <h3>Antonieta de Barros</h3>
+          <p class="role">Educadora, jornalista e política</p>
+          <p>Defendeu a educação e a participação das mulheres na vida pública. Foi eleita deputada estadual em Santa Catarina em 1934, tornando-se uma das primeiras mulheres negras a ocupar esse cargo no Brasil.</p>
+          <small class="photo-credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Antonieta_de_Barros.webp" target="_blank" rel="noopener">Wikimedia Commons</a>.</small>
+        </article>
+
+        <article class="card">
+          <img class="portrait" src="https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%A9lia_Gonzalez_by_Cezar_Loureiro.jpg" alt="Retrato de Lélia Gonzalez" loading="lazy">
+          <h3>Lélia Gonzalez</h3>
+          <p class="role">Intelectual e ativista</p>
+          <p>Foi uma importante pensadora brasileira. Seus estudos e sua atuação contribuíram para o debate sobre racismo, sexismo, cultura e a realidade das mulheres negras no Brasil.</p>
+          <small class="photo-credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:L%C3%A9lia_Gonzalez_by_Cezar_Loureiro.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.</small>
+        </article>
+
+        <article class="card">
+          <div class="symbol" aria-hidden="true">🎭</div>
+          <h3>Ruth de Souza</h3>
+          <p class="role">Atriz</p>
+          <p>Foi uma das pioneiras negras do teatro, do cinema e da televisão no Brasil. Abriu caminhos para outras atrizes negras e construiu uma carreira marcante nas artes cênicas.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol" aria-hidden="true">🖋️</div>
+          <h3>Maria Firmina dos Reis</h3>
+          <p class="role">Escritora e professora</p>
+          <p>Autora de <em>Úrsula</em>, publicado em 1859 e considerado um dos primeiros romances abolicionistas brasileiros. Sua obra deu destaque à humanidade e às vozes de pessoas escravizadas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="importancia">
+      <div class="why">
+        <div>
+          <div class="section-kicker">Memória e reconhecimento</div>
+          <h2>Por que conhecer essas histórias?</h2>
+          <p class="intro">Durante muito tempo, a contribuição de muitas mulheres negras recebeu pouco espaço nos registros históricos. Conhecer suas trajetórias ajuda a valorizar suas conquistas, reconhecer desafios enfrentados e construir uma sociedade com mais respeito e igualdade.</p>
+        </div>
+        <div class="why-box">
+          <p>“Valorizar essas mulheres é reconhecer que suas ideias, seus talentos e suas lutas fazem parte da história de todos nós.”</p>
+          <strong>Conhecimento • Respeito • Igualdade</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Projeto Afro-Negrini</strong>
+    <div>Dia da Consciência Negra • Mulheres Negras que Marcaram a História</div>
+  </footer>
+</body>
+</html>
